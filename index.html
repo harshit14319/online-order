@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width: 1470px)" href="css/phone.css">
+
+    <title>Document</title>
+</head>
+<style>
+  
+    #navbar {
+        position: relative;
+    }
+
+    #navbar ul {
+        display: flex;
+    }
+
+    #navbar ul li {
+        list-style: none;
+        font-size: 1.3rem;
+        padding: 17px;
+        display: block;
+    }
+
+    #navbar ul li a {
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+    }
+
+    #navbar::before {
+        content: "";
+        position: absolute;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.4;
+    }
+
+    #navbar ul li a:hover {
+        color: black;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px 200px;
+        justify-content: center;
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url('hg.jpg');
+        z-index: -1;
+        opacity: 0.89;
+    }
+
+    #home h1 {
+        align-content: center;
+        color: black;
+        font-family: 'Itim', cursive;
+        font-size: 50px;
+    }
+
+    #home p {
+        align-content: center;
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    #home button {
+        padding: 6px;
+        color: white;
+        background-color: rgb(172, 108, 108);
+        align-content: center;
+        border-radius: 6px;
+        border-radius: 2px solid brown;
+        margin: 13px 23px;
+        cursor: pointer;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        border: 2px solid red;
+        border-radius: 20px;
+        width: 25%;
+        margin: -90px 23px 45px 2px;
+        background-color: rgb(248 221 225);
+        box-shadow: 26px 27px 15px rgb(248 221 225);
+    }
+
+
+    .box1 {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        border: 2px solid red;
+        border-radius: 20px;
+        width: 25%;
+        margin: -90px 23px 45px 2px;
+        background-color: rgb(248 221 225);
+        padding: 5px 12px 23px 27px;
+        box-shadow: 26px 27px 15px rgb(248 221 225);
+
+    }
+
+    .box2 {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        align-self: center;
+        border: 2px solid red;
+        border-radius: 20px;
+        width: 25%;
+        margin: -90px 23px 45px 2px;
+        background-color: rgb(248 221 225);
+        box-shadow: 26px 27px 15px rgb(248 221 225);
+
+    }
+
+    .box img {
+        width: 50%;
+        height: 110px;
+        justify-content: center;
+        align-self: center;
+
+    }
+
+    .box1 img {
+        width: 50%;
+        height: 110px;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .box2 img {
+        width: 50%;
+        height: 110px;
+        justify-content: center;
+        align-self: center;
+
+    }
+
+    .hg {
+        margin: 210px 42px 0px 34px;
+        padding: 24px;
+        justify-content: center;
+        align-self: center;
+        display: flex;
+    }
+
+    .hs h2 {
+        align-self: center;
+        margin: 5px 42px -2px 109px;
+    }
+
+    .hpa {
+        display: flex;
+        margin: 40px 43px;
+        padding: 30px;
+        align-content: center;
+        justify-content: center;
+        justify-content: space-between;
+
+
+    }
+
+    
+
+    .haa h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hap {
+        display: flex;
+        height: 185px;
+        width: 10%;
+        justify-content: right;
+
+    }
+
+    .hap::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 200px;
+        background: url(cok.jpg);
+        z-index: -1;
+        opacity: 0.79;
+
+    }
+
+    .hap img {
+        display: block;
+        padding: 27px;
+        margin-top: 11px;
+        margin-left: 31px;
+    }
+
+    .sh {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hv {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 17px;
+        border: 2px solid red;
+        align-content: center;
+
+    }
+
+    /* .sh::before{ 
+        position: absolute;
+        content: "";
+        background: url(conta.jpg);
+        z-index: -1;
+        width: 100%;
+        height: 150px;
+         opacity: 0.89;  */
+    .hv input {
+        padding: 5px;
+        margin-left: 650px;
+        border-radius: 6px;
+    }
+
+    .hv button {
+        display: block;
+        margin-left: 700px;
+        border-radius: 5px;
+    }
+
+    .hv button :hover {
+        border: 2px solid grey;
+        background-color: lavender;
+    }
+    .hpa {
+        color: dark palevioletred;
+    }
+    .hs{
+        color: black;
+    }
+    @media only screen and (max-width: 640px) and (min-width: 340px) {
+     
+      #navbar{
+          width: 204%;
+          height: 60px;
+
+      }
+      #home::before{
+          height: 766px;
+          width: 1016px
+      }
+      #home h1{
+        margin-left: 268px;
+        width: 316px
+      }
+      #home p{
+        width: 650px;
+    margin-left: 277px;
+    padding: 13px
+      }
+      .hg{
+          margin-top: 72px;
+      }
+      .hg h1{
+          margin-left: 337px;
+      }
+      .sh h1{
+        margin-top: 54px;
+    margin-left: 339px;
+    width: 147px;
+      }
+
+      .hpa{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .box1{
+          height: 351px;
+          width:300px;
+          margin-top: 50px;
+          margin-left: 361px;
+      }
+      #home button {
+        width: 90px;
+    margin-left: 253px;
+    height: 39px
+      }
+      .box{
+          height: 351px;
+          width:322px;
+          margin-left: 361px;
+      }
+      .haa{
+        margin-left: 278px;
+    width: 47%;
+    margin-top: -42px;
+      }
+      .box2{
+          height: 351px;
+          width:322px;
+          margin-top: 50px;
+          margin-left: 361px;
+      }
+      .hv{
+          width: 50%;
+          height: 200px;
+          margin-left: -970px;
+      }
+      .hap::before{
+          width: 197%;
+      }
+     }
+</style>
+
+<body>
+    <div class="lp">
+    <div id="navbar">
+        <ul>
+            <li><a href=" #">Home</a></li>
+            <li><a href=" #">Services</a></li>
+            <li><a href=" #">About us</a></li>
+            <li><a href=" #">Contact us</a></li>
+        </ul>
+    </div>
+    <div id="home">
+        <h1>Welcome to my online food</h1>
+        <p> We are here to serve you the best foods wheteher it is a junk food , healthy food, italian food , south indian foood .</p>
+        <p>Gives us the chance to serve you and also get some big discount on your first order form us</p>
+        <button id="btn">order now</button>
+    </div>
+    <div class="hg">
+        <h1>Our Services</h1>
+    </div>
+    <div class="hpa">
+        <div class="box">
+            <img src="hp.jpg">
+            <div class="hs">
+                <h2>Food delivery</h2>
+            </div>
+            <div class="hpa">
+                <p>We will deliever your food on your doorstep and we will take care of all measures taken to protect you from the coronavirus.
+ </p>
+            </div>
+        </div>
+        <div class="box1">
+            <img src="hsg.jpg">
+            <div class="hs">
+                <h2>Catering</h2>
+            </div>
+            <div class="hpa">
+                <p>We are also here for you by providing our catering services to you so that you caan enjoy your birthday , marriage aur any other function happily.
+
+                </p>
+            </div>
+        </div>
+        <div class="box2">
+            <img src="ord.jpg">
+            <div class="hs">
+                <h2>Ordering</h2>
+            </div>
+            <div class="hpa">
+                <p>For ordering the food you can order from our app or u can call at 9834523 . We will order your food in very less time.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="haa">
+        <h1>Our Clients</h1>
+    </div>
+    <div class="hap">
+        <img src="sk.jpg">
+        <img src="tw.jpg">
+        <img src="wi.jpg">
+        <!-- <img src="ap.jpg">
+        <img src="wi.jpg">
+        <img src="sk.jpg"> -->
+    </div>
+    <div class="sh">
+        <h1>Contact us</h1>
+        <div class="hv">
+            <input type="text" placeholder="Enter your Name here">
+            <div> <input type="text" placeholder="Enter your E-mail here here"></div>
+            <div> <input type="text" placeholder="Enter your Phone no. here"></div>
+            <div><input type="text" placeholder="Enter your Message"></div>
+            <button>Submit</button>
+        </div>
+        </div>
+</body>
+
+</html>

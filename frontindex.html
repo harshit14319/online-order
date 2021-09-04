@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+    .main{
+        height: 800px;
+        width: 100%;
+        border:  2px ;
+        background-image: url(avn.png);
+        opacity: 0.9;
+    }
+    .cont{
+        height: 150px;
+        width: 190px;
+        /* border: 2px solid red; */
+        padding: 204px;
+        margin: 167px
+    }
+    #hey{
+        color: wheat;
+    }
+    @media only screen and (max-width: 380px) and (min-width: 300px) {
+        .cont{
+            margin-left: -102px;
+        }
+        body{
+            background-image: linear-gradient( to right top ,rgb(93, 216, 253), rgb(59, 92, 161),rgb(245, 4, 245));
+        }
+        .main {
+            height: 1000px;
+            width: 340px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+</style>
+<body>
+    <div class="main">
+    <div class="cont">
+        <form onsubmit="return validate()" action="index.html">
+        <input id="name" type="text" placeholder="Name">
+        <div></div>
+        <input id="pass" type="password" placeholder="password">
+        <div></div>
+        <label for="cars" id="hey">How was your day:</label>
+        <select name="day" id="day">
+          <option id="gd">Good</option>
+          <option id="bd">Bad</option>
+         
+        </select>
+        <div></div>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+
+    </div>
+    <script>
+          function validate(){
+             var har = document.getElementById('name').value;
+             var pas = document.getElementById('pass').value;
+             var days = document.getElementById('day').value;
+             if( har.trim()==""){
+                 alert("kutreya salla ....Buddhu bana rhe ho");
+                 return false;
+
+             }
+             else if (pas.trim()==""){
+                 alert("Sharafat s passwored dalo");
+                 return false;
+                }
+             else if (pas.length<=7){
+                 alert("Thodi tumbhi mahnat karlo....7 digit k dall do kamse kam");
+                 return false;
+                }
+            else if(days=="Bad"){
+                    alert("Sorry...! If your day is not good then u caant open it ")
+                    return false;
+                }
+            else{
+                alert("Dhanyavad itni mahnat k liye....Enjoy it !")
+                return true;
+            }
+            }
+    </script>
+</body>
+</html>
